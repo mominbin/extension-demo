@@ -1,0 +1,51 @@
+.ssContainer {
+  padding-top: 120px;
+  padding-bottom: 115px;
+  position: relative;
+  display: block;
+}
+.containerFluid{
+  max-width: 1595px;
+  width: 100%;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.ssHeaderContainer {
+  margin-bottom: 45px;
+  text-align: center !important;
+
+  .header {
+    margin: -10px 0 0;
+    font-size: 50px;
+    font-weight: 400;
+    color: #2a2833;
+    line-height: 1.2em;
+  }
+}
+
+.ssContent {
+  padding-top: 100.5px;
+  padding-bottom: 100.5px;
+  margin-top: -20px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.ssStageOuter {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  transition: all 3.5s ease 0s;
+  width: 1500px;
+  justify-content: space-around;
+}
+.item{
+  width: 278.6px;
+  min-height: 1px;
+}

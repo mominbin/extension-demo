@@ -1,0 +1,72 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "Username": "User1",
+      "Password": "Password1",
+      "Email": "user1@example.com",
+      "RegistrationDate": "2024-01-15T12:00:00Z"
+    },
+    {
+      "id": 2,
+      "Username": "User2",
+      "Password": "Password2",
+      "Email": "user2@example.com",
+      "RegistrationDate": "2024-01-15T12:00:00Z"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "Title": "Post1",
+      "Content": "This is the content of Post1.",
+      "PublishDate": "2024-01-16T12:00:00Z",
+      "AuthorID": 1
+    },
+    {
+      "id": 2,
+      "Title": "Post2",
+      "Content": "This is the content of Post2.",
+      "PublishDate": "2024-01-17T12:00:00Z",
+      "AuthorID": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "Content": "This is a comment on Post1.",
+      "CommentDate": "2024-01-18T12:00:00Z",
+      "PostID": 1,
+      "UserID": 2
+    },
+    {
+      "id": 2,
+      "Content": "This is a comment on Post2.",
+      "CommentDate": "2024-01-18T12:00:00Z",
+      "PostID": 2,
+      "UserID": 1
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "TagName": "Tag1"
+    },
+    {
+      "id": 2,
+      "TagName": "Tag2"
+    }
+  ],
+  "posttags": [
+    {
+      "id": 1,
+      "PostID": 1,
+      "TagID": 1
+    },
+    {
+      "id": 2,
+      "PostID": 2,
+      "TagID": 2
+    }
+  ]
+}

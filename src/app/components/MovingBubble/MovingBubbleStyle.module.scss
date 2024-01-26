@@ -1,0 +1,55 @@
+.shape {
+  background-image: linear-gradient(40deg, #0db8ff 0%, #f332ff 100%);
+  width: 143px;
+  height: 143px;
+  top: 5%;
+  left: 3%;
+  -webkit-animation-duration: 8s;
+  animation-duration: 8s;
+  -webkit-perspective: 150px;
+  perspective: 150px;
+}
+
+.shapeCommon {
+  position: absolute;
+  border-radius: 50%;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-animation-name: bubbleMover;
+  animation-name: bubbleMover;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bubbleMover {
+  0% {
+    -webkit-transform: translateY(0px) translateX(0) rotate(0);
+    transform: translateY(0px) translateX(0) rotate(0);
+  }
+  30% {
+    -webkit-transform: translateY(30px) translateX(50px) rotate(15deg);
+    transform: translateY(30px) translateX(50px) rotate(15deg);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+  }
+  50% {
+    -webkit-transform: translateY(50px) translateX(100px) rotate(45deg);
+    transform: translateY(50px) translateX(100px) rotate(45deg);
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+  }
+  80% {
+    -webkit-transform: translateY(30px) translateX(50px) rotate(15deg);
+    transform: translateY(30px) translateX(50px) rotate(15deg);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+  }
+  100% {
+    -webkit-transform: translateY(0px) translateX(0) rotate(0);
+    transform: translateY(0px) translateX(0) rotate(0);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+  }
+}

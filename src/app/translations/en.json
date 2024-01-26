@@ -1,0 +1,21 @@
+{
+  "demo.navbar.item.download": "Download",
+  "demo.navbar.item.features": "Features",
+  "demo.navbar.item.function": "Function",
+  "demo.navbar.item.home": "Home",
+  "demo.navbar.item.video": "Video",
+  "demo.section.banner.buttonText": "Get Started",
+  "demo.section.banner.description": "This plugin is a GPT powered automatic code generation and completion tool, which supports multiple languages: Python, Javascript, Typescript, Java, etc.",
+  "demo.section.banner.header1": "We Deliver the",
+  "demo.section.banner.header2": "Code assistant",
+  "demo.section.banner.header3": "you Need.",
+  "demo.section.features.card1.text": "generate code based on natural language description in comments or provide code suggestion.",
+  "demo.section.features.card1.title": "Code Generation",
+  "demo.section.features.card2.text": "This plugin provides semantic-level translation of code and supports multiple programming languages.",
+  "demo.section.features.card2.title": "Code Translation",
+  "demo.section.features.card3.text": "This plugin can automatically add line-level comments to your code, saving a lot of development time.",
+  "demo.section.features.card3.title": "Comment Generation",
+  "demo.section.features.card4.text": "By using shortcuts and asking questions, you can access more features.",
+  "demo.section.features.card4.title": "More Features",
+  "demo.section.features.title": "Efficient and Powerful, helps you enjoy coding"
+}

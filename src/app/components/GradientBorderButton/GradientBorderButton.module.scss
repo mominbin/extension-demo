@@ -1,0 +1,51 @@
+.buttonThm {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  -webkit-transition: background .4s ease, color .4s ease;
+  transition: background .4s ease, color .4s ease;
+  position: relative;
+  color: #fff;
+  background-image: none;
+  overflow: hidden;
+  padding: 16px 55px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 2px solid;
+    border-image: linear-gradient(90deg, #ff4eb5 0%, #ffa065 100%);
+    border-image-slice: 1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(90deg, #ff4eb5 0%, #ffa065 100%);
+    border-radius: 5px;
+    opacity: 0;
+    transition: all .4s ease;
+    z-index: 0;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  > span {
+    position: relative;
+    z-index: 2;
+  }
+}

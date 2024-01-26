@@ -1,0 +1,21 @@
+{
+  "demo.navbar.item.download": "下载",
+  "demo.navbar.item.features": "特性",
+  "demo.navbar.item.function": "功能",
+  "demo.navbar.item.home": "主页",
+  "demo.navbar.item.video": "视频",
+  "demo.section.banner.buttonText": "开始",
+  "demo.section.banner.description": "此插件是一个由GPT驱动的自动代码生成和完成工具，支持多种语言：Python、Javascript、Typescript、Java等。",
+  "demo.section.banner.header1": "我们提供",
+  "demo.section.banner.header2": "代码助手",
+  "demo.section.banner.header3": "你需要。",
+  "demo.section.features.card1.text": "",
+  "demo.section.features.card1.title": "",
+  "demo.section.features.card2.text": "",
+  "demo.section.features.card2.title": "",
+  "demo.section.features.card3.text": "",
+  "demo.section.features.card3.title": "",
+  "demo.section.features.card4.text": "",
+  "demo.section.features.card4.title": "",
+  "demo.section.features.title": ""
+}

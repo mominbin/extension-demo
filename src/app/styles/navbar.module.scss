@@ -1,0 +1,103 @@
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 91;
+}
+
+.navUL {
+  list-style: none;
+
+  > li {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    > a {
+      color: #ffffff;
+      text-shadow: 1px 0 0 rgba(255, 255, 255, 0.8);
+      padding: 0;
+      transition: all .4s ease;
+      font-size: 16px;
+      font-weight: 400;
+      position: relative;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  > li + li {
+    margin-left: 70px;
+  }
+}
+
+.homeItem {
+  padding: 0 !important;
+  height: 40px;
+}
+
+.navbar {
+  color: #74727a;
+  ul.navUL {
+    > li {
+      padding: 40px 0;
+
+    }
+  }
+}
+.siteMenu{
+  margin-bottom: 0;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  position: relative;
+  background-color: transparent;
+}
+.strickedMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.06);
+  opacity: 0;
+  -webkit-transform: translateY(-110%);
+  transform: translateY(-110%);
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  &.strickyFixed {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+  ul.navUL {
+    > li {
+      padding: 18px 0;
+    }
+  }
+}
+
+.siteHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 91;
+  .strickedMenu {
+    background-color: #2a2833;
+  }
+}
+
+.navContainer {
+  background: transparent;
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px;
+}
