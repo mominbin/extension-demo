@@ -22,8 +22,8 @@ export default defineMessages({
     id: `${scope}.screenshots`,
     defaultMessage: 'App Screenshots',
   },
-  download: {
-    id: `${scope}.download`,
-    defaultMessage: 'Download',
+  faq: {
+    id: `${scope}.faq`,
+    defaultMessage: 'FAQ',
   },
 });

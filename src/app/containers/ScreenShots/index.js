@@ -1,33 +1,28 @@
+import { FormattedMessage } from 'react-intl';
 import ScreenShotsStyle from './ScreenShots.module.scss';
 import imageModule from '../../utils/importImages';
+import Carousel from '../../components/Carousel';
+import messages from '../common.messages';
 const ScreenShots = () => {
-  const imageList = [
-    'app1.png',
-    'app2.png',
-    'app3.png',
-    'app4.png',
-    'app5.png',
-  ].map((item) => imageModule[item]);
-  const clone = [1, 1, 1];
+  const images = ['app1.png', 'app2.png', 'app3.png', 'app4.png', 'app5.png'];
+  const imageList = images.map((item) => imageModule[item]);
   return (
     <section id="screenshots" className={ScreenShotsStyle.ssContainer}>
       <div className={ScreenShotsStyle.containerFluid}>
         <div className={ScreenShotsStyle.ssHeaderContainer}>
           <div className={ScreenShotsStyle.header}>
-            Checkout this plugin Interface Screenshots.
+            <FormattedMessage {...messages.ScreenShotHeader} />
           </div>
         </div>
-        <div className={ScreenShotsStyle.ssContent}>
-          {clone.map(() => (
-            <div className={ScreenShotsStyle.ssStageOuter}>
-              {imageList.map((item, index) => (
-                <div className={ScreenShotsStyle.item} key={index}>
-                  <img src={item} />
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
+        <Carousel windowWidth={300 * 5} hideArraw={true}>
+          <div className={ScreenShotsStyle.ssItemContainer}>
+            {imageList.map((item, index) => (
+              <div key={index} className={ScreenShotsStyle.imageBox}>
+                <img src={item} className={item} alt="" />
+              </div>
+            ))}
+          </div>
+        </Carousel>
       </div>
     </section>
   );

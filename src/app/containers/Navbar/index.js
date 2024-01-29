@@ -6,13 +6,7 @@ import Logo from '../../components/Logo';
 import ChangeLocale from '../ChangeLocale';
 
 const Navbar = () => {
-  const listItem = [
-    'home',
-    'features',
-    'calltoaction',
-    'screenshots',
-    'download',
-  ];
+  const listItem = ['home', 'features', 'calltoaction', 'screenshots', 'faq'];
 
   const [navbar, siteMenu, strickenMenu, stickyFixed] = [
     navbarStyle.navbar,

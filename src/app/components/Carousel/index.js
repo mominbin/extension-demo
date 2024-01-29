@@ -1,18 +1,20 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import Style from './Style.module.scss';
 
 const Carousel = (props) => {
   const listRef = useRef(null);
+  const containerRef = useRef(null);
   let currentImageIndex = 1;
-  const count = props.images.length;
+  const count = 1;
+  const transferTime = 2500;
   const previousImage = () => {
     currentImageIndex = currentImageIndex === 1 ? count : currentImageIndex - 1;
     if (currentImageIndex === count) {
       listRef.current.style.transition = 'none';
       listRef.current.style.transform = `translateX(-${count * 100}%)`;
-      setTimeout(() => {
+      requestAnimationFrame(() => {
         moveTo(currentImageIndex);
-      }, 1);
+      });
     } else {
       moveTo(currentImageIndex);
     }
@@ -22,42 +24,42 @@ const Carousel = (props) => {
     if (currentImageIndex === 1) {
       listRef.current.style.transition = 'none';
       listRef.current.style.transform = `translateX(100%)`;
-      setTimeout(() => {
+      requestAnimationFrame(() => {
         moveTo(currentImageIndex);
-      }, 1);
+      });
     } else {
       moveTo(currentImageIndex);
     }
   };
   const moveTo = (index) => {
-    listRef.current.style.transition = 'transform 0.5s ease';
+    listRef.current.style.transition = `transform ${transferTime}ms ease`;
     listRef.current.style.transform = `translateX(-${100 * (index - 1)}%)`;
   };
+  useEffect(() => {
+    window.console.log(props.windowWidth);
+    containerRef.current.style.width = `${props.windowWidth}px`;
+    const interval = setInterval(nextImage, transferTime * 2);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className={Style.container}>
-      <div className={Style.carouselContainer}>
+      <div ref={containerRef} className={Style.carouselContainer}>
         <div ref={listRef} className={Style.carouselList}>
-          <div className={Style.item}>
-            <img src={props.images[props.images.length - 1]} alt="" />
-          </div>
-          {props.images.map((image, index) => (
-            <div key={index} className={Style.item}>
-              <img src={image} alt="" />
-            </div>
-          ))}
-          <div className={Style.item}>
-            <img src={props.images[0]} alt="" />
-          </div>
+          <div className={Style.item}>{props.children}</div>
+          <div className={Style.item}>{props.children}</div>
+          <div className={Style.item}>{props.children}</div>
         </div>
       </div>
-      <div>
-        <a className={Style.btn} onClick={() => previousImage()}>
-          previous image
-        </a>
-        <a className={Style.btn} onClick={() => nextImage()}>
-          next image
-        </a>
-      </div>
+      {props.hideArraw ? null : (
+        <div>
+          <a className={Style.btn} onClick={() => previousImage()}>
+            previous image
+          </a>
+          <a className={Style.btn} onClick={() => nextImage()}>
+            next image
+          </a>
+        </div>
+      )}
     </div>
   );
 };

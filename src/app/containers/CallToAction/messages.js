@@ -24,4 +24,8 @@ export default defineMessages({
     id: `${scope}.label3`,
     defaultMessage: 'Code Navigation',
   },
+  start: {
+    id: `${scope}.start`,
+    defaultMessage: 'Get Started',
+  },
 });

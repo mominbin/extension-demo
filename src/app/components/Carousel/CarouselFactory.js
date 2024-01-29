@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import Style from './Style.module.scss';
 
 const CarouselFactory = (props) => {
@@ -10,21 +10,22 @@ const CarouselFactory = (props) => {
     if (currentImageIndex === count) {
       listRef.current.style.transition = 'none';
       listRef.current.style.transform = `translateX(-${count * 100}%)`;
-      setTimeout(() => {
+      requestAnimationFrame(() => {
         moveTo(currentImageIndex);
-      }, 1);
+      });
     } else {
       moveTo(currentImageIndex);
     }
   };
   const nextImage = () => {
     currentImageIndex = currentImageIndex === count ? 1 : currentImageIndex + 1;
+    console.log('current image is:', currentImageIndex);
     if (currentImageIndex === 1) {
       listRef.current.style.transition = 'none';
       listRef.current.style.transform = `translateX(100%)`;
-      setTimeout(() => {
+      requestAnimationFrame(() => {
         moveTo(currentImageIndex);
-      }, 1);
+      });
     } else {
       moveTo(currentImageIndex);
     }
@@ -34,10 +35,10 @@ const CarouselFactory = (props) => {
     listRef.current.style.transform = `translateX(-${100 * (index - 1)}%)`;
   };
 
-  // useEffect(() => {
-  //   const interval = setInterval(nextImage, 5000);
-  //   return () => clearInterval(interval);
-  // });
+  useEffect(() => {
+    const interval = setInterval(nextImage, 1500);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className={Style.container}>
       <div className={Style.carouselContainer}>

@@ -1,12 +1,20 @@
 import imageModule from '../../utils/importImages';
-import CarouselFactory from '../../components/Carousel/CarouselFactory';
+import Carousel from '../../components/Carousel';
+import Style from './Style.module.scss';
 const TestCarousel = () => {
   const images = [
-    imageModule['j10.webp'],
-    imageModule['j20.webp'],
-    imageModule['j31.webp'],
+    // imageModule['j10.webp'],
+    imageModule['wz1.png'],
+    imageModule['wz2.png'],
   ];
 
-  return <CarouselFactory images={images} />;
+  return (
+    <Carousel windowWidth={300 * 2}>
+      <div className={Style.container}>
+        <img className={Style.img} src={images[0]} alt="carousel" />
+        <img className={Style.img} src={images[1]} alt="carousel" />
+      </div>
+    </Carousel>
+  );
 };
 export default TestCarousel;

@@ -1,9 +1,10 @@
-import Header from './components/Header';
+import Header from './containers/Header';
 import Banner from './containers/Banner';
 import Features from './containers/Features';
 import CallToAction from './containers/CallToAction';
 import ScreenShots from './containers/ScreenShots';
-import TestCarousel from './containers/TestCarousel';
+import Faq from './containers/Faq';
+import Footer from './containers/Footer';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <Features />
       <CallToAction />
       <ScreenShots />
-      <TestCarousel />
+      <Faq />
+      <Footer />
     </div>
   );
 }

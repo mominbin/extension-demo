@@ -27,7 +27,9 @@ const CallToAction = () => (
             </li>
           </ul>
           <a className="ca-button">
-            <span>Get Started</span>
+            <span>
+              <FormattedMessage {...messages.start} />
+            </span>
           </a>
         </div>
       </div>

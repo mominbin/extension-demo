@@ -27,6 +27,15 @@
   }
 }
 
+.ssItemContainer{
+  display: flex;
+}
+
+.imageBox {
+  width: 290px;
+  margin-right: 10px;;
+}
+
 .ssContent {
   padding-top: 100.5px;
   padding-bottom: 100.5px;
@@ -41,11 +50,10 @@
   position: relative;
   display: flex;
   overflow: hidden;
-  transition: all 3.5s ease 0s;
-  width: 1500px;
-  justify-content: space-around;
+  width: 300px;
+  gap: 10px;
+
 }
 .item{
-  width: 278.6px;
-  min-height: 1px;
+  width:290px;
 }
