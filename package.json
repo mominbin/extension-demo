@@ -62,7 +62,8 @@
     "prepare": "husky add .husky/commit-msg 'npx --no-install commitlint --edit \"$1\"' ",
     "server": "json-server --watch src/stub/blogApp.json --port 8000",
     "extract-intl": "node ./src/internals/scripts/extract-intl.js",
-    "generate": "node src/internals/generators/component/index.mjs"
+    "generate": "node src/internals/generators/component/index.mjs",
+    "get-svg-sprite": "node src/internals/scripts/get-svg-sprite.mjs"
   },
   "browserslist": {
     "production": [

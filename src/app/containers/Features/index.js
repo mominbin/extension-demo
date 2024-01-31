@@ -9,21 +9,25 @@ const Features = () => {
       header: messages.card1Header,
       text: messages.card1Text,
       theme: ThemeColor.Red,
+      icon: 'coffee',
     },
     {
       header: messages.card2Header,
       text: messages.card2Text,
       theme: ThemeColor.Green,
+      icon: 'database',
     },
     {
       header: messages.card3Header,
       text: messages.card3Text,
       theme: ThemeColor.Yellow,
+      icon: 'cpu',
     },
     {
       header: messages.card4Header,
       text: messages.card4Text,
       theme: ThemeColor.Purple,
+      icon: 'feather',
     },
   ];
   return (
@@ -44,6 +48,7 @@ const Features = () => {
               cardHeader={card.header}
               cardText={card.text}
               theme={card.theme}
+              cardIcon={card.icon}
             ></FeaturesCard>
           ))}
         </div>

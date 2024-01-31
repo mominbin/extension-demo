@@ -65,9 +65,6 @@
     .cardIcon {
       @extend .redGradient;
       box-shadow: 0 20px 40px 0 #FF768ECC;
-      &::before{
-        content: "\e901";
-      }
     }
   }
 
@@ -77,7 +74,7 @@
     }
     .cardIcon {
       @extend .purpleGradient;
-      box-shadow: 0px 20px 60px 0px rgba(141, 142, 255, 0.8);
+      box-shadow: 0 20px 60px 0 rgba(141, 142, 255, 0.8);
     }
   }
 
@@ -87,7 +84,7 @@
     }
     .cardIcon {
       @extend .greenGradient;
-      box-shadow:0px 20px 40px 0px rgba(58, 212, 173, 0.8);
+      box-shadow:0 20px 40px 0 rgba(58, 212, 173, 0.8);
     }
   }
 
@@ -97,7 +94,7 @@
     }
     .cardIcon {
       @extend .yellowGradient;
-      box-shadow: 0px 20px 40px 0px rgba(255, 178, 71, 0.8);
+      box-shadow: 0 20px 40px 0 rgba(255, 178, 71, 0.8);
     }
   }
 
@@ -108,7 +105,10 @@
   }
 
 }
-
+.icon{
+  width: 48px;
+  height: 48px;
+}
 .card {
   background-color: #fff;
   border-radius: 5px;

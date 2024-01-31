@@ -24,7 +24,7 @@ const Faq = () => {
   const handleStateChange = (index) => {
     window.console.log(index);
     const newActiveStates = new Array(activeStates.length).fill(false);
-    newActiveStates[index] = true;
+    newActiveStates[index] = !activeStates[index];
     setActiveStates(newActiveStates);
   };
 

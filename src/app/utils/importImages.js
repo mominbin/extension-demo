@@ -10,4 +10,5 @@ const importAll = (r) => {
 const images = importAll(
   require.context('../mediums/imgs', false, /\.(png|jpe?g|svg|webp)$/),
 );
+
 export default images;

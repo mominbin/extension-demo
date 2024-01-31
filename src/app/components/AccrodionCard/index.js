@@ -1,12 +1,13 @@
 import { FormattedMessage } from 'react-intl';
 import Style from './style.module.scss';
+import sprite from '../../mediums/imgs/sprite.svg';
+
 const Card = ({ index, currentState, title, content, onStateChange }) => {
-  // const [active, setActive] = React.useState(false);
   const handleClick = () => {
     onStateChange(index);
   };
   return (
-    <div className={Style.card}>
+    <div>
       <div
         className={`${Style.cardContainer} fadeInUp ${
           currentState ? Style.active : ''
@@ -17,6 +18,11 @@ const Card = ({ index, currentState, title, content, onStateChange }) => {
             <h4>
               <FormattedMessage {...title} />
             </h4>
+            <svg className={Style.icon}>
+              <use
+                xlinkHref={currentState ? `${sprite}#minus` : `${sprite}#plus`}
+              ></use>
+            </svg>
           </div>
           <div className={Style.content}>
             <p>

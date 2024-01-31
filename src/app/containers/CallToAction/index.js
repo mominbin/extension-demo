@@ -1,6 +1,8 @@
 import { FormattedMessage } from 'react-intl';
 import exp1 from '../../mediums/imgs/exp1.gif';
 import messages from './messages';
+import sprite from '../../mediums/imgs/sprite.svg';
+import Style from './Style.module.scss';
 
 const CallToAction = () => (
   <section id="calltoaction" className="ca-section">
@@ -9,6 +11,9 @@ const CallToAction = () => (
       <div className="ca-description-container">
         <div className="ca-description-content">
           <i className="ca-icon" />
+          <svg className={Style.headerIcon} color={'#ff4eb5'}>
+            <use xlinkHref={`${sprite}#layers`}></use>
+          </svg>
           <h2 className="ca-title">
             <FormattedMessage essage {...messages.title} />
           </h2>
@@ -17,13 +22,30 @@ const CallToAction = () => (
           </p>
           <ul className="ca-list">
             <li>
-              <FormattedMessage {...messages.label1} />
+              <div className={Style.liFlex}>
+                <svg className={Style.svg}>
+                  <use xlinkHref={`${sprite}#check`}></use>
+                </svg>
+                <p>
+                  <FormattedMessage {...messages.label1} />
+                </p>
+              </div>
             </li>
-            <li>
-              <FormattedMessage {...messages.label2} />
+            <li content={Style.li}>
+              <div className={Style.liFlex}>
+                <svg className={Style.svg}>
+                  <use xlinkHref={`${sprite}#check`}></use>
+                </svg>
+                <FormattedMessage {...messages.label2} />
+              </div>
             </li>
-            <li>
-              <FormattedMessage {...messages.label3} />
+            <li content={Style.li}>
+              <div className={Style.liFlex}>
+                <svg className={Style.svg}>
+                  <use xlinkHref={`${sprite}#check`}></use>
+                </svg>
+                <FormattedMessage {...messages.label3} />
+              </div>
             </li>
           </ul>
           <a className="ca-button">

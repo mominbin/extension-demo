@@ -1,11 +1,17 @@
 import { FormattedMessage } from 'react-intl';
 import ScreenShotsStyle from './ScreenShots.module.scss';
-import imageModule from '../../utils/importImages';
+import images from '../../utils/importImages';
 import Carousel from '../../components/Carousel';
 import messages from '../common.messages';
 const ScreenShots = () => {
-  const images = ['app1.png', 'app2.png', 'app3.png', 'app4.png', 'app5.png'];
-  const imageList = images.map((item) => imageModule[item]);
+  const imagesList = [
+    'app1.png',
+    'app2.png',
+    'app3.png',
+    'app4.png',
+    'app5.png',
+  ];
+  const imageList = imagesList.map((item) => images[item]);
   return (
     <section id="screenshots" className={ScreenShotsStyle.ssContainer}>
       <div className={ScreenShotsStyle.containerFluid}>

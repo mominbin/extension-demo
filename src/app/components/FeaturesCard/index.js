@@ -1,5 +1,6 @@
 import { FormattedMessage } from 'react-intl';
 import FeaturesCardStyles from './FeaturesCardStyle.module.scss';
+import sprite from '../../mediums/imgs/sprite.svg';
 const FeaturesCard = ({ cardHeader, cardText, cardIcon, theme }) => {
   const cardThemeMap = {
     Red: FeaturesCardStyles.redTheme,
@@ -12,7 +13,11 @@ const FeaturesCard = ({ cardHeader, cardText, cardIcon, theme }) => {
     <div className={`${FeaturesCardStyles.featuresCardBox} `}>
       <div className={`${FeaturesCardStyles.cardContainer} ${themeClass}`}>
         <div className={FeaturesCardStyles.card}>
-          <div className={FeaturesCardStyles.cardIcon}>{cardIcon}</div>
+          <div className={FeaturesCardStyles.cardIcon}>
+            <svg className={FeaturesCardStyles.icon}>
+              <use xlinkHref={`${sprite}#${cardIcon}`}></use>
+            </svg>
+          </div>
           <div className={FeaturesCardStyles.cardHeader}>
             <FormattedMessage {...cardHeader} />
           </div>

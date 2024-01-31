@@ -1,5 +1,4 @@
-.card {
-}
+$themeColor: #ff4eb5;
 
 .cardContainer {
   width: 900px;
@@ -12,8 +11,11 @@
       transform: scaleX(1);
     }
     .title {
+      .icon{
+        color: $themeColor;
+      }
       > h4 {
-        color: #ff4eb5;;
+        color: $themeColor
       }
     }
     .content {
@@ -33,7 +35,7 @@
     right: 0;
     border-radius: 7px;
     transform: scaleX(0);
-    background-image: linear-gradient(0deg, #ff4eb5 0%, #ffa065 100%);
+    background-image: linear-gradient(0deg, $themeColor 0%, #ffa065 100%);
     transition: transform .4s ease;
   }
 }
@@ -50,12 +52,20 @@
 }
 
 .title {
+  display: flex;
   padding: 0 40px;
   cursor: pointer;
   margin: 0;
   color: #2a2833;
   font-size: 18px;
   font-weight: 500;
+  .icon{
+    width: 24px;
+    height: 24px;
+    color: #2a2833;
+    position: absolute;
+    right: 40px;
+  }
   > h4 {
     margin: 0;
     color: #2a2833;
